@@ -2647,12 +2647,12 @@ div.topic_edit_spinner .loading_indicator_spinner {
 
 .sub-unsub-message,
 .date_row {
-    text-align: center;
     padding-bottom: 10px;
 }
 
 .date_row {
     padding-left: 2px;
+    text-align: right;
 }
 
 .sub-unsub-message span,
@@ -2669,6 +2669,10 @@ div.topic_edit_spinner .loading_indicator_spinner {
     opacity: 0.6;
 }
 
+.sub-unsub-message {
+    text-align: center;
+}
+
 .sub-unsub-message span {
     font-size: 1em;
     text-transform: none;
@@ -2682,21 +2686,33 @@ div.topic_edit_spinner .loading_indicator_spinner {
     position: relative;
     content: " ";
     vertical-align: middle;
-    width: 50%;
     height: 0;
     opacity: 0.2;
     border-bottom: 1px solid hsl(0, 0%, 0%);
 }
 
 .sub-unsub-message span::before,
+.sub-unsub-message span::after {
+    width: 50%;
+}
+
 .date_row span::before {
-    right: 0.5em;
+    width: 100%;
+}
+
+.date_row span::after {
+    width: 6px;
+    left: 0.25em;
+}
+
+.sub-unsub-message span::before,
+.date_row span::before {
+    right: 0.25em;
     margin-left: -50%;
 }
 
-.sub-unsub-message span::after,
-.date_row span::after {
-    left: 0.5em;
+.sub-unsub-message span::after {
+    left: 0.25em;
     margin-right: -50%;
 }
 
